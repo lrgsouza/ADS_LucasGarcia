@@ -1,5 +1,9 @@
 package esporte;
 
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import org.junit.jupiter.api.Test;
 
 class AtletaTest {
@@ -29,11 +33,38 @@ class AtletaTest {
 		System.out.println("Aposentado: "+nadador.aposentado);
 		
 		
+	}
+
+	@Test
+	void testarNadador() {
+		Nadador nadador = new Nadador("Lucas", 30, 80, false);
 		
+		assertEquals(nadador.idade, 30);
+		nadador.envelhecer();
+		assertEquals(nadador.idade,31);
+	}
+	
+	@Test
+	void testarCiclista() {
+		Ciclista ciclista = new Ciclista("Lucas", 44, 85, false);
+		assertFalse(ciclista.aposentado);
+		System.out.println("Esta aposenntado?");
 		
+		if (ciclista.aposentado) {
+			System.out.println("Sim");
+		} else {
+			System.out.println("Não");
+		}
+		ciclista.pedalar();
+		ciclista.envelhecer();
+		ciclista.aposentar();
+		assertTrue(ciclista.aposentado);
 		
+		System.out.println("Agora esta aposentado?");
+		System.out.println(ciclista.aposentado ? "Sim" : "Não");
 		
 		
 	}
-
 }
+
+		
