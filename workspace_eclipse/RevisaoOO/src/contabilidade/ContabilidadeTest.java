@@ -21,7 +21,6 @@ public class ContabilidadeTest {
 		System.out.println("get:"+mei.getValorIR());
 		assertEquals(expectIR, mei.getValorIR());
 		
-		
 		Double expectISS = mei.faturamentoMensal * TAXA_ISS_MEI;
 		System.out.println("expect:"+expectISS);
 		System.out.println("get:"+mei.getValorISS());
