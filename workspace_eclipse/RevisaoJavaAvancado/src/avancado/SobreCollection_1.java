@@ -1,7 +1,6 @@
 package avancado;
 
 import java.util.Collection;
-import java.util.HashSet;
 import java.util.TreeSet;
 
 public class SobreCollection_1 {

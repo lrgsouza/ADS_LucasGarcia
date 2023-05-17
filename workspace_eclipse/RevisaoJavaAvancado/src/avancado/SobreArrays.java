@@ -1,8 +1,5 @@
 package avancado;
 
-import java.util.ArrayList;
-
-
 public class SobreArrays {
 	
 	
